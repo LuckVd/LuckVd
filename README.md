@@ -7,12 +7,11 @@
 
 <div align="center">
 <a href="https://luckvd.github.io"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=LuckVd&amp;repo=LuckVd.github.io&amp;theme=github_dark&amp;hide_border=true"/>
-  <img height="160" alt="blog" src="https://github-readme-stats.vercel.app/api/pin/?username=LuckVd&amp;repo=LuckVd.github.io&amp;theme=default&amp;hide_border=true"/>
-</picture></a>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=LuckVd&amp;layout=compact&amp;langs_count=8&amp;theme=github_dark&amp;hide_border=true"/>
-  <img height="160" alt="Most Used Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=LuckVd&amp;layout=compact&amp;langs_count=8&amp;theme=default&amp;hide_border=true"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/LuckVd/LuckVd/main/assets/card-blog-dark.svg"/>
+  <img width="49%" alt="blog" src="https://raw.githubusercontent.com/LuckVd/LuckVd/main/assets/card-blog-light.svg"/>
+</picture></a><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=LuckVd&amp;layout=compact&amp;langs_count=8&amp;theme=github_dark"/>
+  <img height="160" alt="Most Used Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=LuckVd&amp;layout=compact&amp;langs_count=8&amp;theme=default"/>
 </picture>
 </div>
 
@@ -25,19 +24,17 @@
 
 <div align="center">
 <a href="https://github.com/LuckVd/dsh-taskflow"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=LuckVd&amp;repo=dsh-taskflow&amp;theme=github_dark&amp;hide_border=true"/>
-  <img height="160" alt="dsh-taskflow" src="https://github-readme-stats.vercel.app/api/pin/?username=LuckVd&amp;repo=dsh-taskflow&amp;theme=default&amp;hide_border=true"/>
-</picture></a>
-<a href="https://github.com/LuckVd/dsh-btw"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=LuckVd&amp;repo=dsh-btw&amp;theme=github_dark&amp;hide_border=true"/>
-  <img height="160" alt="dsh-btw" src="https://github-readme-stats.vercel.app/api/pin/?username=LuckVd&amp;repo=dsh-btw&amp;theme=default&amp;hide_border=true"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/LuckVd/LuckVd/main/assets/card-dsh-taskflow-dark.svg"/>
+  <img width="49%" alt="dsh-taskflow" src="https://raw.githubusercontent.com/LuckVd/LuckVd/main/assets/card-dsh-taskflow-light.svg"/>
+</picture></a><a href="https://github.com/LuckVd/dsh-btw"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/LuckVd/LuckVd/main/assets/card-dsh-btw-dark.svg"/>
+  <img width="49%" alt="dsh-btw" src="https://raw.githubusercontent.com/LuckVd/LuckVd/main/assets/card-dsh-btw-light.svg"/>
 </picture></a>
 <a href="https://github.com/LuckVd/DeepVuln"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=LuckVd&amp;repo=DeepVuln&amp;theme=github_dark&amp;hide_border=true"/>
-  <img height="160" alt="DeepVuln" src="https://github-readme-stats.vercel.app/api/pin/?username=LuckVd&amp;repo=DeepVuln&amp;theme=default&amp;hide_border=true"/>
-</picture></a>
-<a href="https://github.com/LuckVd/CSRFscanver"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=LuckVd&amp;repo=CSRFscanver&amp;theme=github_dark&amp;hide_border=true"/>
-  <img height="160" alt="CSRFscanver" src="https://github-readme-stats.vercel.app/api/pin/?username=LuckVd&amp;repo=CSRFscanver&amp;theme=default&amp;hide_border=true"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/LuckVd/LuckVd/main/assets/card-DeepVuln-dark.svg"/>
+  <img width="49%" alt="DeepVuln" src="https://raw.githubusercontent.com/LuckVd/LuckVd/main/assets/card-DeepVuln-light.svg"/>
+</picture></a><a href="https://github.com/LuckVd/CSRFscanver"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/LuckVd/LuckVd/main/assets/card-CSRFscanver-dark.svg"/>
+  <img width="49%" alt="CSRFscanver" src="https://raw.githubusercontent.com/LuckVd/LuckVd/main/assets/card-CSRFscanver-light.svg"/>
 </picture></a>
 </div>
