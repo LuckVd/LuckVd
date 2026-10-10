@@ -23,6 +23,47 @@ jobs:
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
 
+      - name: crop to recent weeks (bigger cells)
+        run: |
+          python3 - <<'PY'
+          import re, pathlib, collections
+
+          KEEP_WEEKS = 36  # 只保留最近 36 周，铺满 README 栏宽时格子放大 ~1.5 倍
+
+          for f in pathlib.Path("dist").glob("*.svg"):
+              try:
+                  s = f.read_text()
+                  rects = re.findall(r'<rect class="c" x="([\-\d.]+)" y="([\-\d.]+)"', s)
+                  if not rects:
+                      raise ValueError("no grid rects found")
+                  xs = sorted({float(x) for x, _ in rects})
+                  ys = sorted({float(y) for _, y in rects})
+                  pitch = collections.Counter(
+                      round(b - a, 2) for a, b in zip(xs, xs[1:])
+                  ).most_common(1)[0][0]
+                  pitchy = collections.Counter(
+                      round(b - a, 2) for a, b in zip(ys, ys[1:])
+                  ).most_common(1)[0][0]
+                  cell = float(re.search(r';width:(\d+)px;height:(\d+)px', s).group(1))
+                  cellh = float(re.search(r';width:(\d+)px;height:(\d+)px', s).group(2))
+                  cols, rows = len(xs), len(ys)
+                  keep = min(KEEP_WEEKS, cols)
+                  pad = (pitch - cell) / 2
+                  x0 = xs[cols - keep] - pad
+                  x1 = xs[-1] + cell + pad
+                  y0 = ys[0] - pad
+                  y1 = ys[-1] + cellh + pad
+                  vb = f'{x0:g} {y0:g} {x1 - x0:g} {y1 - y0:g}'
+                  s = re.sub(
+                      r'<svg ([^>]*?)viewBox="[^"]*" width="[^"]*" height="[^"]*"',
+                      f'<svg \\1viewBox="{vb}" width="{x1 - x0:g}" height="{y1 - y0:g}"',
+                      s, count=1)
+                  f.write_text(s)
+                  print(f.name, "->", vb)
+              except Exception as e:
+                  print(f.name, "kept original:", e)
+          PY
+
       - name: push to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
