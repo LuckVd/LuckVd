@@ -23,12 +23,20 @@ jobs:
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
 
-      - name: crop to recent weeks (bigger cells)
+      - name: crop to recent weeks & keep cells lit
         run: |
           python3 - <<'PY'
           import re, pathlib, collections
 
           KEEP_WEEKS = 36  # 只保留最近 36 周，铺满 README 栏宽时格子放大 ~1.5 倍
+
+          def keep_lit(style):
+              # 蛇经过后格子保持原贡献色（而不是空底色被"吃掉"），
+              # 闪光色 == 格子原色，已逐格验证，因此动画位移保留、格子常亮
+              return re.sub(
+                  r'@keyframes (c[0-9a-z]+)\{([\d.]+)%\{fill:(#[0-9a-f]+)\}[\d.]+%,100%\{fill:#[0-9a-f]+\}\}',
+                  lambda m: f'@keyframes {m.group(1)}{{{m.group(2)}%{{fill:{m.group(3)}}}{m.group(4)}%,100%{{fill:{m.group(3)}}}}}',
+                  style)
 
           for f in pathlib.Path("dist").glob("*.svg"):
               try:
@@ -41,23 +49,21 @@ jobs:
                   pitch = collections.Counter(
                       round(b - a, 2) for a, b in zip(xs, xs[1:])
                   ).most_common(1)[0][0]
-                  pitchy = collections.Counter(
-                      round(b - a, 2) for a, b in zip(ys, ys[1:])
-                  ).most_common(1)[0][0]
-                  cell = float(re.search(r';width:(\d+)px;height:(\d+)px', s).group(1))
-                  cellh = float(re.search(r';width:(\d+)px;height:(\d+)px', s).group(2))
-                  cols, rows = len(xs), len(ys)
-                  keep = min(KEEP_WEEKS, cols)
+                  cell, cellh = (float(re.search(r';width:(\d+)px;height:(\d+)px', s).group(i)) for i in (1, 2))
+                  cols, rows, keep = len(xs), len(ys), min(KEEP_WEEKS, len(xs))
                   pad = (pitch - cell) / 2
-                  x0 = xs[cols - keep] - pad
-                  x1 = xs[-1] + cell + pad
-                  y0 = ys[0] - pad
-                  y1 = ys[-1] + cellh + pad
+                  x0, x1 = xs[cols - keep] - pad, xs[-1] + cell + pad
+                  y0, y1 = ys[0] - pad, ys[-1] + cellh + pad
                   vb = f'{x0:g} {y0:g} {x1 - x0:g} {y1 - y0:g}'
                   s = re.sub(
                       r'<svg ([^>]*?)viewBox="[^"]*" width="[^"]*" height="[^"]*"',
                       f'<svg \\1viewBox="{vb}" width="{x1 - x0:g}" height="{y1 - y0:g}"',
                       s, count=1)
+                  style = re.search(r'<style>.*?</style>', s, re.S).group(0)
+                  patched = keep_lit(style)
+                  if patched != style:
+                      s = s.replace(style, patched)
+                      print(f.name, "cells set to stay lit")
                   f.write_text(s)
                   print(f.name, "->", vb)
               except Exception as e:
@@ -71,3 +77,27 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: checkout for assets refresh
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: refresh data assets (cards & chart)
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 assets/fetch_data.py
+          python3 assets/gen_cards.py
+          python3 assets/gen_chart.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          if git diff --cached --quiet; then
+            echo "assets unchanged"
+          else
+            git commit -qm "chore: refresh profile assets [skip ci]"
+            git push
+            echo "assets refreshed"
+          fi

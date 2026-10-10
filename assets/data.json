@@ -1,0 +1,91 @@
+{
+ "chart": {
+  "rows": [
+   [
+    "Tencent/WeKnora",
+    12
+   ],
+   [
+    "dsh 生态插件",
+    3
+   ],
+   [
+    "manaflow-ai/cmux",
+    2
+   ],
+   [
+    "4thfever/cultivation-world-simulator",
+    1
+   ],
+   [
+    "yezannnnn/agentGroup",
+    1
+   ],
+   [
+    "alipay/xAST 基准",
+    1
+   ]
+  ],
+  "total_pr": 20,
+  "total_projects": 8
+ },
+ "repos": {
+  "LuckVd.github.io": {
+   "desc": "个人博客 · Hexo",
+   "stars": 0,
+   "updated": "2026-10",
+   "lang": "Stylus"
+  },
+  "dsh-taskflow": {
+   "desc": "AI 合同式任务看板 · DeepSeek Harness Web 插件:AI 拆解/实现/举证,人工验收,打回迭代,状态留痕",
+   "stars": 0,
+   "updated": "2026-10",
+   "lang": "TypeScript"
+  },
+  "dsh-btw": {
+   "desc": "DeepSeek Harness Web 插件 · BTW 侧问面板：随手弹窗追问，独立一次性会话，不污染主对话上下文",
+   "stars": 2,
+   "updated": "2026-08",
+   "lang": "JavaScript"
+  },
+  "DeepVuln": {
+   "desc": "AI 驱动的多层智能漏洞挖掘系统 · 情报层 + 分析层 + 扫描流水线 + Web 管理平台",
+   "stars": 0,
+   "updated": "2026-09",
+   "lang": "Python"
+  },
+  "CSRFscanver": {
+   "desc": "CSRF 漏洞扫描器（Python）",
+   "stars": 0,
+   "updated": "2022-10",
+   "lang": "Python"
+  }
+ },
+ "langs": [
+  [
+   "Python",
+   62.7
+  ],
+  [
+   "TypeScript",
+   15.7
+  ],
+  [
+   "HTML",
+   11.2
+  ],
+  [
+   "JavaScript",
+   6.7
+  ],
+  [
+   "Vue",
+   2.3
+  ],
+  [
+   "CSS",
+   1.4
+  ]
+ ],
+ "generated_at": "2026-10-10"
+}

@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""生成开源贡献柱状图（GitHub 原生配色，浅色/深色两版）。数据: merged PRs by repo, 2026-10 查询。"""
+"""生成开源贡献柱状图（GitHub 原生配色，浅色/深色两版）。
+数据来源：data.json（fetch_data.py 生成）；无 data.json 时用内置兜底值。"""
+import json
 import os
 
-DATA = [
-    ("Tencent/WeKnora", 12),
-    ("dsh 生态插件", 3),
-    ("manaflow-ai/cmux", 2),
-    ("alipay/xAST 基准", 1),
-    ("agentGroup", 1),
- ("cultivation-world-simulator", 1),
-]
+HERE = os.path.dirname(os.path.abspath(__file__))
+try:
+    _D = json.load(open(os.path.join(HERE, "data.json")))["chart"]
+except Exception:
+    _D = {"rows": [["Tencent/WeKnora", 12], ["dsh 生态插件", 3], ["manaflow-ai/cmux", 2],
+                   ["alipay/xAST 基准", 1], ["agentGroup", 1], ["cultivation-world-simulator", 1]],
+          "total_pr": 20, "total_projects": 8}
+
+DATA = [(label, n) for label, n in _D["rows"]]
+TOTAL_PR = _D["total_pr"]
+TOTAL_PROJECTS = _D["total_projects"]
 
 W, PAD = 880, 16
 LABEL_X, TRACK_X, TRACK_W = 16, 238, 594
@@ -33,7 +38,7 @@ def esc(s):
 for name, t in THEMES.items():
     s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{FONT}">']
     s.append(f'<text x="{LABEL_X}" y="24" font-size="11" letter-spacing="2" fill="{t["head"]}">OPEN SOURCE · MERGED PULL REQUESTS</text>')
-    s.append(f'<text x="{W-PAD}" y="24" font-size="11" fill="{t["head"]}" text-anchor="end">{total} merged · 8 projects</text>')
+    s.append(f'<text x="{W-PAD}" y="24" font-size="11" fill="{t["head"]}" text-anchor="end">{TOTAL_PR} merged · {TOTAL_PROJECTS} projects</text>')
     for i, (label, n) in enumerate(DATA):
         cy = HEAD_H + i * PITCH + BAR_H / 2
         bw = TRACK_W * n / vmax
