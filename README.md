@@ -10,8 +10,8 @@
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/LuckVd/LuckVd/main/assets/card-blog-dark.svg"/>
   <img width="49%" alt="blog" src="https://raw.githubusercontent.com/LuckVd/LuckVd/main/assets/card-blog-light.svg"/>
 </picture></a><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=LuckVd&amp;layout=compact&amp;langs_count=8&amp;theme=github_dark"/>
-  <img height="160" alt="Most Used Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=LuckVd&amp;layout=compact&amp;langs_count=8&amp;theme=default"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/LuckVd/LuckVd/main/assets/card-langs-dark.svg"/>
+  <img width="49%" alt="Most Used Languages" src="https://raw.githubusercontent.com/LuckVd/LuckVd/main/assets/card-langs-light.svg"/>
 </picture>
 </div>
 
