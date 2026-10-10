@@ -4,6 +4,7 @@
 与 oss-contrib 柱状图同一设计语言。数据来源见各 CARD / LANGS 定义。"""
 import math
 import os
+import re
 
 W, H, PAD = 440, 160, 16
 INNER = W - PAD * 2
@@ -27,23 +28,28 @@ def units(s):
     return sum(1.0 if ord(c) > 0x2E80 else 0.55 for c in s)
 
 def wrap(s, maxu=32.5, lines=2):
+    # ascii 连续段（单词/数字）不拆开，CJK 逐字可断
+    tokens = re.findall(r"[!-~][ !-~]*|.", s)
     out, cur, cu = [], "", 0.0
-    for ch in s:
-        w = 1.0 if ord(ch) > 0x2E80 else 0.55
-        if cu + w > maxu and cur:
+    overflow = False
+    for tok in tokens:
+        wu = units(tok)
+        if cu + wu > maxu and cur:
             out.append(cur)
             cur, cu = "", 0.0
-        cur += ch
-        cu += w
         if len(out) == lines:
+            overflow = True
             break
+        if tok == " " and not cur:
+            continue
+        cur += tok
+        cu += wu
     out.append(cur)
-    if len(out) > lines:
+    if overflow or len(out) > lines:
         out = out[:lines]
-        last = out[-1]
-        while units(last) > maxu - 1.5:
-            last = last[:-1]
-        out[-1] = last + "…"
+        while units(out[-1]) > maxu - 1.5:
+            out[-1] = out[-1][:-1]
+        out[-1] += "…"
     return out[:lines]
 
 REPO_ICON = ("M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5"
@@ -80,12 +86,15 @@ CARDS = [
          stars=0, updated="2026-09"),
     dict(slug="CSRFscanver", link="https://github.com/LuckVd/CSRFscanver",
          title="CSRFscanver", lang="Python",
-         desc="CSRF 漏洞扫描器（Python）。",
+         desc="CSRF 漏洞扫描器：针对 Web 应用的 CSRF 防护缺陷进行检测。",
          stars=0, updated="2022-10"),
 ]
 
+M = 6  # 卡片左右透明边距，相邻卡片间距 ~12px
+
 def gen_card(c, t):
-    s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{FONT}">']
+    s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W+2*M}" height="{H}" viewBox="0 0 {W+2*M} {H}" font-family="{FONT}">',
+         f'<g transform="translate({M},0)">']
     s.append(f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="8" fill="{t["bg"]}" stroke="{t["border"]}"/>')
     s.append(f'<svg x="{PAD}" y="21" width="15" height="15" viewBox="0 0 16 16">'
              f'<path fill="{t["muted"]}" d="{REPO_ICON}"/></svg>')
@@ -99,6 +108,7 @@ def gen_card(c, t):
         s.append(star_icon(PAD + 5, 137, t["star"]))
         s.append(f'<text x="{PAD+16}" y="141" font-size="11" fill="{t["star"]}">{c["stars"]}</text>')
     s.append(f'<text x="{W-PAD}" y="141" font-size="10.5" fill="{t["muted"]}" text-anchor="end">Updated {c["updated"]}</text>')
+    s.append('</g>')
     s.append('</svg>')
     return "".join(s)
 
@@ -109,7 +119,9 @@ LANG_BAR = {"Python": "#3572A5", "TypeScript": "#3178c6", "HTML": "#e34c26",
 
 def gen_langs(t):
     uid = t["bg"][1:]
-    s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{FONT}">']
+    M = 6
+    s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W+2*M}" height="{H}" viewBox="0 0 {W+2*M} {H}" font-family="{FONT}">',
+         f'<g transform="translate({M},0)">']
     s.append(f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="8" fill="{t["bg"]}" stroke="{t["border"]}"/>')
     for i, bh in enumerate((6, 10, 14)):
         s.append(f'<rect x="{PAD + i*4.5}" y="{29 - bh/2}" width="3" height="{bh}" rx="1.5" fill="{t["muted"]}"/>')
@@ -131,6 +143,7 @@ def gen_langs(t):
         s.append(f'<circle cx="{lx+4}" cy="{ly-4}" r="4.5" fill="{LANG_BAR[lname]}"/>')
         s.append(f'<text x="{lx+16}" y="{ly}" font-size="12" fill="{t["text"]}">{esc(lname)}</text>')
         s.append(f'<text x="{lx+188}" y="{ly}" font-size="12" fill="{t["muted"]}" text-anchor="end">{pct}%</text>')
+    s.append('</g>')
     s.append('</svg>')
     return "".join(s)
 
