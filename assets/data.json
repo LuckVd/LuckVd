@@ -3,7 +3,7 @@
   "rows": [
    [
     "Tencent/WeKnora",
-    13
+    14
    ],
    [
     "dsh 生态插件",
@@ -26,7 +26,7 @@
     1
    ]
   ],
-  "total_pr": 21,
+  "total_pr": 22,
   "total_projects": 8
  },
  "repos": {
@@ -64,19 +64,19 @@
  "langs": [
   [
    "Python",
-   65.6
+   66.0
   ],
   [
    "TypeScript",
-   13.9
+   13.7
   ],
   [
    "HTML",
-   10.0
+   9.9
   ],
   [
    "JavaScript",
-   6.0
+   5.9
   ],
   [
    "Java",
@@ -87,5 +87,5 @@
    2.0
   ]
  ],
- "generated_at": "2026-10-12"
+ "generated_at": "2026-10-13"
 }
