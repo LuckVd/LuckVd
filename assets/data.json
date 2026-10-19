@@ -14,6 +14,14 @@
     2
    ],
    [
+    "nolabs-ai/nono",
+    1
+   ],
+   [
+    "HKUDS/nanobot",
+    1
+   ],
+   [
     "4thfever/cultivation-world-simulator",
     1
    ],
@@ -26,8 +34,8 @@
     1
    ]
   ],
-  "total_pr": 24,
-  "total_projects": 8
+  "total_pr": 26,
+  "total_projects": 10
  },
  "repos": {
   "LuckVd.github.io": {
@@ -87,5 +95,5 @@
    2.0
   ]
  ],
- "generated_at": "2026-10-18"
+ "generated_at": "2026-10-19"
 }
