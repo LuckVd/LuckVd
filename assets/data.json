@@ -18,6 +18,10 @@
     1
    ],
    [
+    "bytedance/deer-flow",
+    1
+   ],
+   [
     "HKUDS/nanobot",
     1
    ],
@@ -34,8 +38,8 @@
     1
    ]
   ],
-  "total_pr": 26,
-  "total_projects": 10
+  "total_pr": 27,
+  "total_projects": 11
  },
  "repos": {
   "LuckVd.github.io": {
@@ -72,7 +76,7 @@
  "langs": [
   [
    "Python",
-   66.0
+   66.1
   ],
   [
    "TypeScript",
@@ -80,7 +84,7 @@
   ],
   [
    "HTML",
-   9.9
+   9.8
   ],
   [
    "JavaScript",
@@ -95,5 +99,5 @@
    2.0
   ]
  ],
- "generated_at": "2026-10-19"
+ "generated_at": "2026-10-20"
 }
