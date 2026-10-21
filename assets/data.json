@@ -10,12 +10,12 @@
     3
    ],
    [
-    "manaflow-ai/cmux",
+    "nolabs-ai/nono",
     2
    ],
    [
-    "nolabs-ai/nono",
-    1
+    "manaflow-ai/cmux",
+    2
    ],
    [
     "bytedance/deer-flow",
@@ -38,7 +38,7 @@
     1
    ]
   ],
-  "total_pr": 27,
+  "total_pr": 28,
   "total_projects": 11
  },
  "repos": {
@@ -76,19 +76,19 @@
  "langs": [
   [
    "Python",
-   66.1
+   66.4
   ],
   [
    "TypeScript",
-   13.7
+   13.6
   ],
   [
    "HTML",
-   9.8
+   9.7
   ],
   [
    "JavaScript",
-   5.9
+   5.8
   ],
   [
    "Java",
@@ -99,5 +99,5 @@
    2.0
   ]
  ],
- "generated_at": "2026-10-20"
+ "generated_at": "2026-10-21"
 }
