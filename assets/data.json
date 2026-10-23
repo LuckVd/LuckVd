@@ -3,15 +3,15 @@
   "rows": [
    [
     "Tencent/WeKnora",
-    16
+    18
+   ],
+   [
+    "nolabs-ai/nono",
+    3
    ],
    [
     "dsh 生态插件",
     3
-   ],
-   [
-    "nolabs-ai/nono",
-    2
    ],
    [
     "manaflow-ai/cmux",
@@ -38,7 +38,7 @@
     1
    ]
   ],
-  "total_pr": 28,
+  "total_pr": 31,
   "total_projects": 11
  },
  "repos": {
@@ -99,5 +99,5 @@
    2.0
   ]
  ],
- "generated_at": "2026-10-22"
+ "generated_at": "2026-10-23"
 }
