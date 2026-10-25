@@ -18,6 +18,10 @@
     2
    ],
    [
+    "thedotmack/claude-mem",
+    1
+   ],
+   [
     "bytedance/deer-flow",
     1
    ],
@@ -38,8 +42,8 @@
     1
    ]
   ],
-  "total_pr": 31,
-  "total_projects": 11
+  "total_pr": 32,
+  "total_projects": 12
  },
  "repos": {
   "LuckVd.github.io": {
@@ -99,5 +103,5 @@
    2.0
   ]
  ],
- "generated_at": "2026-10-24"
+ "generated_at": "2026-10-25"
 }
