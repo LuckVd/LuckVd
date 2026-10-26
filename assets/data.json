@@ -3,7 +3,7 @@
   "rows": [
    [
     "Tencent/WeKnora",
-    18
+    24
    ],
    [
     "nolabs-ai/nono",
@@ -42,7 +42,7 @@
     1
    ]
   ],
-  "total_pr": 32,
+  "total_pr": 38,
   "total_projects": 12
  },
  "repos": {
@@ -103,5 +103,5 @@
    2.0
   ]
  ],
- "generated_at": "2026-10-25"
+ "generated_at": "2026-10-26"
 }
