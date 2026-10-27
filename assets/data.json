@@ -3,7 +3,7 @@
   "rows": [
    [
     "Tencent/WeKnora",
-    24
+    25
    ],
    [
     "nolabs-ai/nono",
@@ -26,6 +26,10 @@
     1
    ],
    [
+    "kirodotdev/KiroCrew",
+    1
+   ],
+   [
     "HKUDS/nanobot",
     1
    ],
@@ -42,8 +46,8 @@
     1
    ]
   ],
-  "total_pr": 38,
-  "total_projects": 12
+  "total_pr": 40,
+  "total_projects": 13
  },
  "repos": {
   "LuckVd.github.io": {
@@ -103,5 +107,5 @@
    2.0
   ]
  ],
- "generated_at": "2026-10-26"
+ "generated_at": "2026-10-27"
 }
