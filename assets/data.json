@@ -18,6 +18,10 @@
     2
    ],
    [
+    "Tencent/AI-Infra-Guard",
+    1
+   ],
+   [
     "thedotmack/claude-mem",
     1
    ],
@@ -46,8 +50,8 @@
     1
    ]
   ],
-  "total_pr": 40,
-  "total_projects": 13
+  "total_pr": 41,
+  "total_projects": 14
  },
  "repos": {
   "LuckVd.github.io": {
@@ -107,5 +111,5 @@
    2.0
   ]
  ],
- "generated_at": "2026-10-27"
+ "generated_at": "2026-10-28"
 }
