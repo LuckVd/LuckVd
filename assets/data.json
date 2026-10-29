@@ -14,6 +14,10 @@
     3
    ],
    [
+    "kirodotdev/KiroCrew",
+    2
+   ],
+   [
     "manaflow-ai/cmux",
     2
    ],
@@ -27,10 +31,6 @@
    ],
    [
     "bytedance/deer-flow",
-    1
-   ],
-   [
-    "kirodotdev/KiroCrew",
     1
    ],
    [
@@ -50,7 +50,7 @@
     1
    ]
   ],
-  "total_pr": 41,
+  "total_pr": 42,
   "total_projects": 14
  },
  "repos": {
@@ -111,5 +111,5 @@
    2.0
   ]
  ],
- "generated_at": "2026-10-28"
+ "generated_at": "2026-10-29"
 }
