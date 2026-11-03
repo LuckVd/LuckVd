@@ -7,7 +7,7 @@
    ],
    [
     "nolabs-ai/nono",
-    3
+    4
    ],
    [
     "dsh 生态插件",
@@ -50,14 +50,14 @@
     1
    ]
   ],
-  "total_pr": 46,
+  "total_pr": 47,
   "total_projects": 14
  },
  "repos": {
   "LuckVd.github.io": {
    "desc": "个人博客 · Hexo",
    "stars": 0,
-   "updated": "2026-10",
+   "updated": "2026-11",
    "lang": "Stylus"
   },
   "dsh-taskflow": {
@@ -111,5 +111,5 @@
    2.0
   ]
  ],
- "generated_at": "2026-11-02"
+ "generated_at": "2026-11-03"
 }
