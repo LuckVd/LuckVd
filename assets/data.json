@@ -14,6 +14,10 @@
     3
    ],
    [
+    "thedotmack/claude-mem",
+    2
+   ],
+   [
     "kirodotdev/KiroCrew",
     2
    ],
@@ -26,15 +30,15 @@
     1
    ],
    [
-    "thedotmack/claude-mem",
-    1
-   ],
-   [
     "bytedance/deer-flow",
     1
    ],
    [
     "HKUDS/nanobot",
+    1
+   ],
+   [
+    "TencentCloud/CubeSandbox",
     1
    ],
    [
@@ -50,8 +54,8 @@
     1
    ]
   ],
-  "total_pr": 47,
-  "total_projects": 14
+  "total_pr": 49,
+  "total_projects": 15
  },
  "repos": {
   "LuckVd.github.io": {
@@ -111,5 +115,5 @@
    2.0
   ]
  ],
- "generated_at": "2026-11-03"
+ "generated_at": "2026-11-04"
 }
