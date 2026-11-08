@@ -10,6 +10,10 @@
     4
    ],
    [
+    "bytedance/deer-flow",
+    3
+   ],
+   [
     "dsh 生态插件",
     3
    ],
@@ -27,10 +31,6 @@
    ],
    [
     "Tencent/AI-Infra-Guard",
-    1
-   ],
-   [
-    "bytedance/deer-flow",
     1
    ],
    [
@@ -54,7 +54,7 @@
     1
    ]
   ],
-  "total_pr": 49,
+  "total_pr": 51,
   "total_projects": 15
  },
  "repos": {
@@ -115,5 +115,5 @@
    2.0
   ]
  ],
- "generated_at": "2026-11-07"
+ "generated_at": "2026-11-08"
 }
