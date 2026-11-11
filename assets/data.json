@@ -6,6 +6,10 @@
     29
    ],
    [
+    "thedotmack/claude-mem",
+    4
+   ],
+   [
     "nolabs-ai/nono",
     4
    ],
@@ -18,16 +22,24 @@
     3
    ],
    [
-    "thedotmack/claude-mem",
-    2
-   ],
-   [
     "kirodotdev/KiroCrew",
     2
    ],
    [
     "manaflow-ai/cmux",
     2
+   ],
+   [
+    "multica-ai/multica",
+    1
+   ],
+   [
+    "run-llama/llama_index",
+    1
+   ],
+   [
+    "microsoft/PyRIT",
+    1
    ],
    [
     "Tencent/AI-Infra-Guard",
@@ -54,8 +66,8 @@
     1
    ]
   ],
-  "total_pr": 51,
-  "total_projects": 15
+  "total_pr": 56,
+  "total_projects": 18
  },
  "repos": {
   "LuckVd.github.io": {
@@ -92,28 +104,28 @@
  "langs": [
   [
    "Python",
-   66.4
+   66.7
   ],
   [
    "TypeScript",
-   13.6
+   12.5
   ],
   [
    "HTML",
-   9.7
+   8.9
   ],
   [
    "JavaScript",
-   5.8
-  ],
-  [
-   "Java",
-   2.5
+   5.5
   ],
   [
    "Vue",
-   2.0
+   4.1
+  ],
+  [
+   "Java",
+   2.3
   ]
  ],
- "generated_at": "2026-11-10"
+ "generated_at": "2026-11-11"
 }
