@@ -22,6 +22,10 @@
     3
    ],
    [
+    "Armur-Ai/Pentest-Swarm-AI",
+    2
+   ],
+   [
     "kirodotdev/KiroCrew",
     2
    ],
@@ -66,8 +70,8 @@
     1
    ]
   ],
-  "total_pr": 56,
-  "total_projects": 18
+  "total_pr": 58,
+  "total_projects": 19
  },
  "repos": {
   "LuckVd.github.io": {
@@ -127,5 +131,5 @@
    2.3
   ]
  ],
- "generated_at": "2026-11-12"
+ "generated_at": "2026-11-13"
 }
