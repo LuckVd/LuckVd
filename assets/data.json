@@ -3,7 +3,7 @@
   "rows": [
    [
     "Tencent/WeKnora",
-    29
+    30
    ],
    [
     "thedotmack/claude-mem",
@@ -23,6 +23,10 @@
    ],
    [
     "Armur-Ai/Pentest-Swarm-AI",
+    2
+   ],
+   [
+    "alibaba/open-code-review",
     2
    ],
    [
@@ -70,8 +74,8 @@
     1
    ]
   ],
-  "total_pr": 58,
-  "total_projects": 19
+  "total_pr": 61,
+  "total_projects": 20
  },
  "repos": {
   "LuckVd.github.io": {
@@ -131,5 +135,5 @@
    2.3
   ]
  ],
- "generated_at": "2026-11-15"
+ "generated_at": "2026-11-17"
 }
