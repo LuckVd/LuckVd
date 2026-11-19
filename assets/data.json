@@ -42,6 +42,10 @@
     1
    ],
    [
+    "zilliztech/memsearch",
+    1
+   ],
+   [
     "run-llama/llama_index",
     1
    ],
@@ -74,8 +78,8 @@
     1
    ]
   ],
-  "total_pr": 61,
-  "total_projects": 20
+  "total_pr": 62,
+  "total_projects": 21
  },
  "repos": {
   "LuckVd.github.io": {
@@ -135,5 +139,5 @@
    2.3
   ]
  ],
- "generated_at": "2026-11-18"
+ "generated_at": "2026-11-19"
 }
