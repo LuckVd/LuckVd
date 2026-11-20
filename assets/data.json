@@ -7,7 +7,7 @@
    ],
    [
     "thedotmack/claude-mem",
-    4
+    5
    ],
    [
     "nolabs-ai/nono",
@@ -78,7 +78,7 @@
     1
    ]
   ],
-  "total_pr": 62,
+  "total_pr": 63,
   "total_projects": 21
  },
  "repos": {
@@ -139,5 +139,5 @@
    2.3
   ]
  ],
- "generated_at": "2026-11-19"
+ "generated_at": "2026-11-20"
 }
