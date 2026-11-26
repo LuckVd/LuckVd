@@ -22,6 +22,10 @@
     3
    ],
    [
+    "zilliztech/memsearch",
+    2
+   ],
+   [
     "Armur-Ai/Pentest-Swarm-AI",
     2
    ],
@@ -39,10 +43,6 @@
    ],
    [
     "multica-ai/multica",
-    1
-   ],
-   [
-    "zilliztech/memsearch",
     1
    ],
    [
@@ -78,7 +78,7 @@
     1
    ]
   ],
-  "total_pr": 63,
+  "total_pr": 64,
   "total_projects": 21
  },
  "repos": {
@@ -139,5 +139,5 @@
    2.3
   ]
  ],
- "generated_at": "2026-11-25"
+ "generated_at": "2026-11-26"
 }
