@@ -3,7 +3,7 @@
   "rows": [
    [
     "Tencent/WeKnora",
-    30
+    32
    ],
    [
     "thedotmack/claude-mem",
@@ -78,7 +78,7 @@
     1
    ]
   ],
-  "total_pr": 64,
+  "total_pr": 66,
   "total_projects": 21
  },
  "repos": {
@@ -139,5 +139,5 @@
    2.3
   ]
  ],
- "generated_at": "2026-11-26"
+ "generated_at": "2026-11-27"
 }
